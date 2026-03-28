@@ -1,0 +1,14 @@
+<h1>Hola mundo 🚀</h1>
+
+<button onclick="cargar()">Cargar datos</button>
+<p id="respuesta"></p>
+
+<script>
+function cargar() {
+  fetch("https://mi-api-yjyc.onrender.com")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("respuesta").innerText = data;
+    });
+}
+</script>
